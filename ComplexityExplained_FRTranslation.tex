@@ -1,0 +1,589 @@
+
+\documentclass[12pt]{article}
+
+
+%%%%%
+%% Compilation language: 0 for english ; 1 for french
+%\def \thelanguage {0}
+\def \thelanguage {1}
+
+% include comments or not
+\def \draft {1}
+
+\input{header.tex}
+
+\begin{document}
+
+\title{\bpar{Complexity Explained}{La complexité Expliquée}}
+\date{}
+
+
+
+\maketitle
+
+\justify
+
+
+\section*{Complexity explained}{La complexité Expliquée}
+
+\bpar{
+``There’s no love in a carbon atom, no hurricane in a water molecule, no financial collapse in a dollar bill.'' (Peter Dodds)
+}{
+``Il n'y a aucun amour dans un atome de carbone, aucun ouragan dans une molécule d'eau, aucune crise financière dans un billet de banque.'' (Peter Dodds)
+}
+
+
+\bpar{
+Complexity science, also called complex systems science, studies how a large collection of components - locally interacting with each other at the small scales - can spontaneously self-organize to exhibit non-trivial global structures and behaviors at larger scales, often without external intervention, central authorities or leaders.
+}{
+Les sciences de la complexité, que l'on désigne aussi par sciences des systèmes complexes, s'intéressent à la manière dont un large ensemble de composants - qui interagissent localement entre eux aux échelles microscopiques - peuvent spontanément s'auto-organiser pour induire des structures globales et des comportements non triviaux aux échelles macroscopiques, souvent sans intervention extérieure, autorités centrales ou dirigeants.
+}
+
+
+\comment[JR]{``sciences'' au pluriel me semble plus utilisé en Français ?}
+
+\comment[JR]{pour les échelles ``micro'' et ``macro'' est peut-être trop technique ? mais cela me pose un problème ``small'' and ``large'' en tant que géographe (où c'est l'inverse)}
+
+\bpar{
+The properties of the collection may not be understood or predicted from the full knowledge of its constituents alone. Such a collection is called a complex system and it requires new mathematical frameworks and scientific methodologies for its investigation.
+}{
+Les propriétés de l'ensemble peuvent ne pas être comprises ou prédites à partir de la connaissance seule de ses constituents. Cet ensemble constitue alors un système complexe, dont l'étude implique de nouvelles approches mathématiques et de nouvelles méthodologies scientifiques.
+}
+
+\bpar{
+Here are a few things you should know about complex systems.
+}{
+Voici un certain nombre de notions essentielles autour des systèmes complexes.
+}
+
+
+
+
+\section{Interactions}{Interactions}
+
+
+\bpar{
+COMPLEX SYSTEMS CONSIST OF MANY COMPONENTS INTERACTING WITH EACH OTHER AND THEIR ENVIRONMENT IN MULTIPLE WAYS.
+}{
+
+}
+
+\bpar{
+``Every object that biology studies is a system of systems.'' (François Jacob)
+}{
+
+}
+
+
+
+\bpar{
+Complex systems are often characterized by many components that interact in multiple ways among each other and potentially with their environment too. These components form networks of interactions, sometimes with just a few components involved in many interactions. Interactions may generate novel information that make it difficult to study components in isolation or to completely predict their future. In addition, the components of a system can also be whole new systems, leading to systems of systems, being interdependent on one another.
+}{
+
+}
+
+
+\bpar{
+The main challenge of complexity science is not only to see the parts and their connections but also to understand how these connections give rise to the whole.
+}{
+
+}
+
+\subsection*{Examples}{Exemples}
+
+\bpar{
+\begin{itemize}
+	\item Billions of interacting neurons in the human brain
+	\item Computers communicating in the Internet
+	\item Humans in multifaceted relationships
+\end{itemize}
+}{
+
+}
+
+\subsection*{Relevant Concepts}{Concepts}
+
+
+\bpar{
+System, component, interactions, network, structure, heterogeneity, inter-relatedness, inter-connectedness, interdependence, subsystems, boundaries, environment, open/closed systems, systems of systems.
+}{
+
+}
+
+
+\subsection*{References}{Bibliographies}
+
+Mitchell, Melanie. Complexity: A Guided Tour. Oxford University Press, 2009.
+
+
+Capra, Fritjof and Luisi, Pier Luigi. The Systems View of Life: A Unifying Vision. Cambridge University Press, 2016.
+
+
+
+
+\section{Emergence}{Emergence}
+
+
+\bpar{
+PROPERTIES OF COMPLEX SYSTEMS AS A WHOLE ARE VERY DIFFERENT, AND OFTEN UNEXPECTED, FROM PROPERTIES OF THEIR INDIVIDUAL COMPONENTS.
+}{
+
+}
+
+
+
+\bpar{
+``You don’t need something more to get something more. That’s what emergence means.'' (Murray Gell-Mann)
+}{
+
+}
+
+
+\bpar{
+In simple systems, the properties of the whole can be understood or predicted from the addition or aggregation of its components.
+}{
+
+}
+
+
+\bpar{
+In other words, macroscopic properties of a simple system can be deduced from the microscopic properties of its parts. In complex systems, however, the properties of the whole often cannot be understood or predicted from the knowledge of its components because of a phenomenon known as “emergence.” This phenomenon involves diverse mechanisms causing the interaction between components of a system to generate novel information and exhibit non-trivial collective structures and behaviors at larger scales.
+}{
+
+}
+
+
+\bpar{
+This fact is usually summarized with the popular phrase ``the whole is more than the sum of its parts.''
+}{
+
+}
+
+
+\subsection*{Examples}{Exemples}
+
+\bpar{
+\begin{itemize}
+	\item A massive amount of air and vapor molecules forming a tornado	\item Multiple cells forming a living organism	\item Billions of neurons in a brain producing consciousness and intelligence
+\end{itemize}
+}{
+
+}
+
+\subsection*{Relevant concepts}{Concepts}
+
+\bpar{
+Emergence, scales, non-linearity, bottom- up, description, surprise, indirect effects, non-intuitiveness, phase transition, non- reducibility, breakdown of traditional linear/ statistical thinking, ``the whole is more than the sum of its parts.''
+}{
+
+}
+
+
+\subsection*{References}{Bibliographie}
+
+
+Bar-Yam, Yaneer. Dynamics of Complex Systems. Addison-Wesley, 1997.
+
+
+Ball, Philip. Critical Mass: How One Thing Leads to Another. Macmillan, 2004.
+
+
+
+\section{Dynamics}{Dynamiques}
+
+\bpar{
+COMPLEX SYSTEMS TEND TO CHANGE THEIR STATES DYNAMICALLY, OFTEN SHOWING UNPREDICTABLE LONG-TERM BEHAVIOR.
+}{
+
+}
+
+
+\bpar{
+``Chaos: When the present determines the future, but the approximate present does not approximately determine the future.'' (Edward Lorenz)
+}{
+
+}
+
+
+\bpar{
+Systems can be analyzed in terms of the changes of their states over time. A state is described in sets of variables that best characterize the system.
+}{
+
+}
+
+
+\bpar{
+As the system changes its state from one to another, its variables also change, often responding to its environment.
+}{
+
+}
+
+
+\bpar{
+This change is called linear if it is directly proportional to time, the system’s current state, or changes in the environment, or non-linear if it is not proportional to them.
+}{
+
+}
+
+
+\bpar{
+Complex systems are typically non-linear, changing at different rates depending on their states and their environment.
+}{
+
+}
+
+\bpar{
+They also may have stable states at which they can stay the same even if perturbed, or unstable states at which the systems can be disrupted by a small perturbation.
+}{
+
+}
+
+\bpar{
+In some cases, small environmental changes can completely change the system behavior, known as bifurcations, phase transitions, or ``tipping points.''
+}{
+
+}
+
+
+\bpar{
+Some systems are ``chaotic'' - extremely sensitive to small perturbations and unpredictable in the long run, showing the so- called ``butterfly effect.''
+}{
+
+}
+
+\bpar{
+A complex system can also be path-dependent, that is, its future state depends not only on its present state, but also on its past history.
+}{
+
+}
+
+\subsection*{Examples}{Exemples}
+
+\bpar{
+\begin{itemize}
+	\item Weather constantly changing in unpredictable ways
+	\item Financial volatility in the stock market
+\end{itemize}
+}{
+
+}
+
+\subsection*{Relevant concepts}{Concepts}
+
+\bpar{
+Dynamics, behavior, non-linearity, chaos, non-equilibrium, sensitivity, butterfly effect, bifurcation, long-term non-predictability, uncertainty, path/context dependence, non-ergodicity.
+}{
+
+}
+
+
+\subsection*{References}{Bibliographie}
+
+Strogatz, Steven H. Nonlinear Dynamics and Chaos. CRC Press, 1994.
+
+
+Gleick, James. Chaos: Making a New Science. Open Road Media, 2011.
+
+
+	
+	
+\section{Self-organization}{Auto-organisation}
+	
+	
+\bpar{
+COMPLEX SYSTEMS MAY SELF-ORGANIZE TO PRODUCE NON-TRIVIAL PATTERNS SPONTANEOUSLY WITHOUT A BLUEPRINT.
+}{
+
+}
+	
+	
+\bpar{
+``It is suggested that a system of chemical substances, called morphogens, reacting together and diffusing through a tissue, is adequate to account for the main phenomena of morphogenesis.'' (Alan Turing)
+}{
+	
+}
+
+
+\bpar{
+Interactions between components of a complex system may produce a global pattern or behavior. This is often described as self- organization, as there is no central or external controller.
+}{
+
+}
+
+\bpar{
+Rather, the ``control'' of a self-organizing system is distributed across components and integrated through their interactions. Self- organization may produce physical/functional structures like crystalline patterns of materials and morphologies of living organisms, or dynamic/informational behaviors like shoaling behaviors of fish and electrical pulses propagating in animal muscles.
+}{
+
+}
+
+\bpar{
+As the system becomes more organized by this process, new interaction patterns may emerge over time, potentially leading to the production of greater complexity.
+}{
+
+}
+
+\bpar{
+In some cases, complex systems may self- organize into a “critical” state that could only exist in a subtle balance between randomness and regularity.
+}{
+
+}
+
+\bpar{
+Patterns that arise in such self-organized critical states often show various peculiar properties, such as self-similarity and power- law distributions of pattern properties.
+}{
+
+}
+
+
+\subsection*{Examples}{Exemples}
+
+\bpar{
+\begin{itemize}
+	\item Single egg cell dividing and eventually self-organizing into complex shape of an organism	\item Cities growing as they attract more people and money	\item A large population of starlings showing complex flocking patterns
+\end{itemize}
+}{
+
+}
+
+
+\subsection*{Relevant concepts}{Concepts}
+
+
+\bpar{
+Self-organization, collective behavior, swarms, patterns, space and time, order from disorder, criticality, self-similarity, burst, self- organized criticality, power laws, heavy-tailed distributions, morphogenesis, decentralized/ distributed control, guided self-organization.
+}{
+
+}
+
+
+\subsection*{References}{Bibliographie}
+
+Ball, Philip. The Self-Made Tapestry: Pattern Formation in Nature. Oxford University Press, 1999.
+
+Camazine, Scott, et al. Self-Organization in Biological Systems. Princeton University Press, 2003.
+
+
+
+	
+\section{Adaptation}{Adaptation}
+
+\bpar{
+COMPLEX SYSTEMS MAY ADAPT AND EVOLVE.
+}{
+
+}
+	
+	
+\bpar{
+``Nothing in biology makes sense except in the light of evolution.'' (Theodosius Dobzhansky)
+}{
+
+}	
+
+\bpar{
+Rather than just moving towards a steady state, complex systems are often active and responding to the environment - the difference between a ball that rolls to the bottom of a hill and stops and a bird that adapts to wind currents while flying. This adaptation can happen at multiple scales: cognitive, through learning and psychological development; social, via sharing information through social ties; or even evolutionary, through genetic variation and natural selection.
+}{
+
+}	
+	
+\bpar{
+When the components are damaged or removed, these systems are often able to adapt and recover their previous functionality, and sometimes they become even better than before. This can be achieved by robustness, the ability to withstand perturbations; resilience, the ability to go back to the original state after a large perturbation; or adaptation, the ability to change the system itself to remain functional and survive. Complex systems with these properties are known as complex adaptive systems.
+}{
+
+}	
+	
+	
+	
+\subsection*{Examples}{Exemples}
+
+\bpar{
+\begin{itemize}
+	\item An immune system continuously learning about pathogens	\item A colony of termites that repairs damages caused to its mound	\item Terrestrial life that has survived numerous crisis events in billions of years of its history
+\end{itemize}
+}{
+
+}
+	
+\subsection*{Relevant concepts}{Concepts}
+
+\bpar{
+Learning, adaptation, evolution, fitness landscapes, robustness, resilience, diversity, complex adaptive systems, genetic algorithms, artificial life, artificial intelligence, swarm intelligence, creativity, open- endedness.
+}{
+
+}
+	
+\subsection*{References}{Bibliographie}
+
+Holland, John Henry. Adaptation in Natural and Artificial Systems. MIT press, 1992.
+
+Solé, Ricard, and Elena, Santiago F. Viruses as Complex Adaptive Systems. Princeton University Press, 2018.
+	
+
+
+
+\section{Interdisciplinarity}{Interdisciplinarité}
+
+\bpar{
+COMPLEXITY SCIENCE CAN BE USED TO UNDERSTAND AND MANAGE A WIDE VARIETY OF SYSTEMS IN MANY DOMAINS.
+}{
+
+}
+
+
+\bpar{
+``It may not be entirely vain, however,to search for common properties among diverse kinds of complex systems\ldots The ideas of feedback and information provide a frame of reference for viewing a wide range of situations.'' (Herbert Simon)
+}{
+
+}
+
+\bpar{
+Complex systems appear in all scientific and professional domains, including physics, biology, ecology, social sciences, finance, business, management, politics, psychology, anthropology, medicine, engineering, information technology, and more. Many of the latest technologies, from social media and mobile technologies to autonomous vehicles and blockchain, produce complex systems with emergent properties that are crucial to understand and predict for societal well-being.
+}{
+
+}
+
+\bpar{
+A key concept of complexity science is universality, which is the idea that many systems in different domains display phenomena with common underlying features that can be described using the same scientific models. These concepts warrant a new multidisciplinary mathematical/ computational framework.
+}{
+
+}
+
+\bpar{
+Complexity science can provide a comprehensive, cross-disciplinary analytical approach that complements traditional scientific approaches that focus on specific subject matter in each domain.
+}{
+
+}
+
+\subsection*{Examples}{Exemples}
+
+\bpar{
+\begin{itemize}
+	\item Common properties of various information- processing systems (nervous systems, the Internet, communication infrastructure)
+	\item Universal patterns found in various spreading processes (epidemics, fads, forest fires)
+\end{itemize}
+}{
+
+}
+
+
+
+\subsection*{Relevant concepts}{Concepts}
+
+\bpar{
+Universality, various applications, multi-/ inter-/cross-/trans-disciplinarity, economy, social systems, ecosystems, sustainability, real-world problem solving, cultural systems, relevance to everyday life decision making.
+}{
+
+}
+
+
+\subsection*{References}{Bibliographie}
+
+Thurner, Stefan, Hanel, Rudolf and Klimek, Peter. Introduction to the Theory of Complex Systems. Oxford University Press, 2018
+
+
+Page, Scott E. The Model Thinker. Hachette UK, 2018.
+
+
+
+\section{Methods}{Méthodes}
+
+\bpar{
+MATHEMATICAL AND COMPUTATIONAL METHODS ARE POWERFUL TOOLS TO STUDY COMPLEX SYSTEMS.
+}{
+
+}
+
+
+\bpar{
+``All models are wrong, but some are useful.'' (George Box)
+}{
+
+}
+
+
+\bpar{
+Complex systems involve many variables and configurations that cannot be explored simply with intuition or paper-and-pencil calculation. Instead, advanced mathematical and computational modeling, analysis and simulations are almost always required to see how these systems are structured and change with time.
+}{
+
+}
+
+\bpar{
+With the help of computers, we can check if a set of hypothetical rules could lead to a behavior observed in nature, and then use our knowledge of those rules to generate predictions of different “what-if” scenarios. Computers are also used to analyze massive data coming from complex systems to reveal and visualize hidden patterns that are not visible to human eyes.
+}{
+
+}
+
+\bpar{
+These computational methods can lead to discoveries that then deepen our understanding and appreciation of nature.
+}{
+
+}
+
+\subsection*{Examples}{Exemples}
+
+\bpar{
+\begin{itemize}
+	\item Agent-based modeling for the flocking of birds	\item Mathematical and computer models of the brain	\item Climate forecasting computer models	\item Computer models of pedestrian dynamics	
+\end{itemize}
+}{
+
+}
+
+\subsection*{Relevant concepts}{Concepts}
+
+\bpar{
+Modeling, simulation, data analysis, methodology, agent-based modeling, network analysis, game theory, visualization, rules, understanding.
+}{
+
+}
+
+
+\subsection{References}{Bibliographie}
+
+Pagels, Heinz R. The Dreams of Reason: The Computer and the Rise of the Sciences of Complexity. Bantam Books, 1989.
+
+Sayama, Hiroki. Introduction to the Modeling and Analysis of Complex Systems. Open SUNY Textbooks, 2015.
+
+
+
+
+\bigskip
+
+
+
+\bpar{
+``I think the next [21st] century will be the century of complexity.'' (Stephen Hawking)
+}{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+\end{document}

@@ -1,0 +1,145 @@
+
+\usepackage[document]{ragged2e}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% geometry
+\usepackage[margin=1.8cm]{geometry}
+
+\usepackage[french,english]{babel}
+
+\usepackage{pagecolor,color}
+
+\usepackage{xparse}
+\usepackage{ifthen}
+
+
+\DeclareDocumentCommand{\comment}{o m o o o o}
+{\ifthenelse{\draft=1}{
+  \IfValueT{#1}{
+      \textcolor{red}{\textbf{C (#1) : }#2}
+      \IfValueT{#3}{\textcolor{blue}{\textbf{A1 : }#3}}
+      \IfValueT{#4}{\textcolor{green}{\textbf{A2 : }#4}}
+      \IfValueT{#5}{\textcolor{red!50!blue}{\textbf{A3 : }#5}}
+      \IfValueT{#6}{\textcolor{blue}{\textbf{A4 : }#6}}
+    }
+    \IfNoValueT{#1}{
+      \textcolor{red}{\textbf{C : }#2}
+      \IfValueT{#3}{\textcolor{blue}{\textbf{A1 : }#3}}
+      \IfValueT{#4}{\textcolor{green}{\textbf{A2 : }#4}}
+      \IfValueT{#5}{\textcolor{red!50!blue}{\textbf{A3 : }#5}}
+      \IfValueT{#6}{\textcolor{blue}{\textbf{A4 : }#6}}
+    }
+ }{}
+}
+
+
+\newcommand{\bpar}[2]{
+    \ifthenelse{\thelanguage=0}{#1}{}
+    \ifthenelse{\thelanguage=1}{#2}{}
+}
+
+
+
+\let\oldsection\section
+
+\RenewDocumentCommand\section {s o o m m}
+   {
+    \IfBooleanTF{#1}                   
+        {
+        \ifthenelse{\thelanguage=0}{\oldsection*{#4}}{}
+        \ifthenelse{\thelanguage=1}{\oldsection*{#5}}{}
+          \IfNoValueF{#2}            % if TOC arg is given create a TOC entry
+            {          
+              \ifthenelse{\thelanguage=0}{\addcontentsline{toc}{section}{#2}}{}
+              \ifthenelse{\thelanguage=1}{\addcontentsline{toc}{section}{#3}}{}
+            }
+        }  
+      {                              % no star given 
+        \IfNoValueTF{#2}
+          {
+            \ifthenelse{\thelanguage=0}{\oldsection{#4}}{}
+            \ifthenelse{\thelanguage=1}{\oldsection{#5}}{}
+           }       % no TOC arg
+          { 
+            \ifthenelse{\thelanguage=0}{\oldsection[#2]{#4}}{}
+            \ifthenelse{\thelanguage=1}{\oldsection[#3]{#5}}{}
+           }
+      }   
+  }
+
+\let\oldsubsection\subsection
+
+\RenewDocumentCommand\subsection {s o o m m}
+   {
+    \IfBooleanTF{#1}                   
+        {
+        \ifthenelse{\thelanguage=0}{\oldsubsection*{#4}}{}
+        \ifthenelse{\thelanguage=1}{\oldsubsection*{#5}}{}
+          \IfNoValueF{#2}            % if TOC arg is given create a TOC entry
+             {          
+              \ifthenelse{\thelanguage=0}{\addcontentsline{toc}{subsection}{#2}}{}
+              \ifthenelse{\thelanguage=1}{\addcontentsline{toc}{subsection}{#3}}{}
+            }
+        }  
+      {                              % no star given 
+        \IfNoValueTF{#2}
+          {
+           \ifthenelse{\thelanguage=0}{\oldsubsection{#4}}{}
+           \ifthenelse{\thelanguage=1}{\oldsubsection{#5}}{}
+           }       % no TOC arg
+          { 
+           \ifthenelse{\thelanguage=0}{\oldsubsection[#2]{#4}}{}
+           \ifthenelse{\thelanguage=1}{\oldsubsection[#3]{#5}}{}
+           }
+      }   
+  }
+
+
+\let\oldsubsubsection\subsubsection
+
+\RenewDocumentCommand\subsubsection {s o o m m}
+   {
+    \IfBooleanTF{#1}   
+        {
+        \ifthenelse{\thelanguage=0}{\oldsubsubsection*{#4}}{}
+        \ifthenelse{\thelanguage=1}{\oldsubsubsection*{#5}}{}
+          \IfNoValueF{#2}            % if TOC arg is given create a TOC entry
+             {          
+              \ifthenelse{\thelanguage=0}{\addcontentsline{toc}{subsubsection}{#2}}{}
+              \ifthenelse{\thelanguage=1}{\addcontentsline{toc}{subsubsection}{#3}}{}
+            }
+        }  
+      {                              % no star given 
+        \IfNoValueTF{#2}
+          {
+           \ifthenelse{\thelanguage=0}{\oldsubsubsection{#4}}{}
+           \ifthenelse{\thelanguage=1}{\oldsubsubsection{#5}}{}
+           }       % no TOC arg
+          { 
+           \ifthenelse{\thelanguage=0}{\oldsubsubsection[#2]{#4}}{}
+           \ifthenelse{\thelanguage=1}{\oldsubsubsection[#3]{#5}}{}
+           }
+      }   
+  }
+  
+  
+  
+\let\oldparagraph\paragraph
+
+\RenewDocumentCommand\paragraph {s m m}
+   {
+    \IfBooleanTF{#1}
+        {
+        \ifthenelse{\thelanguage=0}{\oldparagraph*{#2}}{}
+        \ifthenelse{\thelanguage=1}{\oldparagraph*{#3}}{}
+        }  
+      { 
+           \ifthenelse{\thelanguage=0}{\oldparagraph{#2}}{}
+           \ifthenelse{\thelanguage=1}{\oldparagraph{#3}}{}   
+      }   
+  }
+
+
+      
+
